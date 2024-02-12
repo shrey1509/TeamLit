@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar-logo{
+  min-width: 1.7012rem;
+  min-height: 2.1475rem;
+}
+.navbar-icon{
+  height: clamp(1.125rem,1.125rem,1.125rem);
+  min-width: 1.125rem;
+}
+.contacts-profile{
+  height: clamp(3.5rem,3.5rem,3.5rem);
+  min-width: 3.5rem;
+}
