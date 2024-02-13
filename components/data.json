@@ -1,0 +1,95 @@
+{
+    "accountName":"John Doe",
+    "accountImage":"account.png",
+    "onlineList":[
+        "lorel.png",
+        "suitguy.png",
+        "mojixa.png",
+        "jackson.png"
+    ],
+    "contactMessages":[
+        {
+            "firstName":"Marina",
+            "lastName":"Jolly",
+            "image":"marina.png",
+            "status":"typing",
+            "notifications":2,
+            "message":"",
+            "active":false,
+            "sentAt":""
+        },
+        {
+            "firstName":"Jackson",
+            "lastName":"Roy",
+            "image":"jackson.png",
+            "status":"picReceived",
+            "notifications":0,
+            "message":"",
+            "active":false,
+            "sentAt":""
+        },
+        {
+            "firstName":"Hafsa",
+            "lastName":"Shaik",
+            "image":"hafsa.png",
+            "status":"msgReceived",
+            "notifications":3,
+            "message":"Meet me before presentation and I'll help out",
+            "active":false,
+            "sentAt":""
+        },
+        {
+            "firstName":"Alix",
+            "lastName":"Joseph",
+            "image":"alix.png",
+            "status":"msgReceived",
+            "notifications":0,
+            "message":"How did you prepare the presentation so fast",
+            "active":false,
+            "sentAt":""
+        },
+        {
+            "firstName":"College Group",
+            "lastName":"",
+            "image":"group.png",
+            "status":"msgSent",
+            "notifications":0,
+            "message":"What about wednesday evening or night",
+            "active":true,
+            "sentAt":"09:35"
+        },
+        {
+            "firstName":"Rockstar",
+            "lastName":"Benj",
+            "image":"rockstar.png",
+            "status":"fileReceived",
+            "notifications":2,
+            "message":"",
+            "active":false,
+            "sentAt":""
+        },
+        {
+            "firstName":"Max",
+            "lastName":"Hob",
+            "image":"max.png",
+            "status":"msgReceived",
+            "notifications":0,
+            "message":"Next presentation will be on Thursday",
+            "active":false,
+            "sentAt":""
+        }
+    ],
+    "activeChat": {
+        "name":"College Group",
+        "image":"group.png",
+        "participants":[],
+        "messages":[]
+    },
+    "contactInfo":{
+        "name":"College Group",
+        "tag":"",
+        "media":[],
+        "files":[],
+        "links":[]
+    }
+}
