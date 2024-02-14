@@ -18,7 +18,8 @@ module.exports = {
         'base':'1.875rem'
       },
       screens:{
-        '1.5xl':'1366px'
+        '1.5xl':'1366px',
+        '3xl':'1700px'
       }
     },
   },

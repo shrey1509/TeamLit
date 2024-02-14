@@ -82,14 +82,101 @@
     "activeChat": {
         "name":"College Group",
         "image":"group.png",
-        "participants":[],
-        "messages":[]
+        "participants":["jackson.png","rockstar.png","marina.png"],
+        "typing":[
+            {
+                "name":"Max Hob",
+                "image":"max.png"
+            }
+        ],
+        "messages":[
+            {
+                "day":"Yesterday",
+                "messageList":[
+                    {
+                        "name":"Mojixa Tan",
+                        "image":"mojixa.png",
+                        "sentAt":"09:03 pm",
+                        "isUser":false,
+                        "online":false,
+                        "msgs":[
+                            "Hi, how are you all?",
+                            "How many of you prepared the presentation?"
+                        ]
+                    },
+                    {
+                        "name":"Rockstar Benj",
+                        "image":"rockstar.png",
+                        "sentAt":"09:31 pm",
+                        "isUser":false,
+                        "online":true,
+                        "msgs":[
+                            "Hello Mojixa! I am just about to start the preparation."
+                        ]
+                    }
+
+                ]
+            },
+            {
+                "day":"Today",
+                "messageList":[
+                    {
+                        "name":"Lorel Morph",
+                        "image":"lorel.png",
+                        "sentAt":"09:20 am",
+                        "isUser":false,
+                        "online":false,
+                        "msgs":[
+                            "Apologise guys i will not be able to contribute in presentation as i am having fever since 2 days."
+                        ]
+                    },
+                    {
+                        "name":"Mojixa Tan",
+                        "image":"mojixa.png",
+                        "sentAt":"10:45 am",
+                        "isUser":false,
+                        "online":false,
+                        "msgs":[
+                            "No issue, take some rest.",
+                            "What about others?"
+                        ]
+                    },
+                    {
+                        "name":"You",
+                        "image":"account.png",
+                        "sentAt":"10:45 am",
+                        "isUser":true,
+                        "online":false,
+                        "msgs":[
+                            "I just completed it last night."
+                        ]
+                    }
+
+                ]
+            }
+            
+            
+        ]
     },
     "contactInfo":{
         "name":"College Group",
-        "tag":"",
-        "media":[],
-        "files":[],
-        "links":[]
+        "tag":"@collegefriends",
+        "image":"group.png",
+        "media":["building1.png","building2.png","building3.png","building4.png"],
+        "files":[
+            {
+                "name":"Architechture21.doc",
+                "date":"04/09/2023 at 09:34am"
+            },
+            {
+                "name":"Architechture28.doc",
+                "date":"02/09/2023 at 10:43am"
+            },
+            {
+                "name":"Architechture16.doc",
+                "date":"01/09/2023 at 08:21am"
+            }
+        ],
+        "links":["https://dribbble/hafsadeartistosenfropasta"]
     }
 }
