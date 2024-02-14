@@ -14,7 +14,7 @@ function Chat() {
                     <div className="flex flex-col gap-1">
                         <h3 className=" font-bold text-xl">{data.activeChat.name}</h3>
                         <div className="flex pl-3">
-                            {data.activeChat.participants.length>0&&data.activeChat.participants.map((contact)=><Image className=" -ml-3 rounded-full border border-white object-cover participants-profile"  src={"/contacts/"+contact} width={30} height={30} alt="group members"/>)}
+                            {data.activeChat.participants.length>0&&data.activeChat.participants.map((contact)=><Image key={contact} className=" -ml-3 rounded-full border border-white object-cover participants-profile"  src={"/contacts/"+contact} width={30} height={30} alt="group members"/>)}
                             <div className=" -ml-3 h-[1.875rem] w-[1.875rem] rounded-full object-cover bg-primary flex items-center justify-center">
                                 <span className=" font-semibold text-xs text-white">7+</span>
                             </div>
@@ -33,11 +33,11 @@ function Chat() {
             <div className=" px-base overflow-y-scroll no-scrollbar">
                 {
                     data.activeChat.messages.length>0&&data.activeChat.messages.map((day)=>
-                        <div className=" flex flex-col gap-5 pt-5">
+                        <div key={day.day} className=" flex flex-col gap-5 pt-5">
                             <small className=" w-full text-center">{day.day}</small>
                             {day.messageList.map((contact)=>
-                                <div className={`${contact.isUser?' self-end flex-row-reverse':'self-start flex-row'} self flex gap-5`}>
-                                    <div key={contact} class="relative h-min">
+                                <div key={contact.name} className={`${contact.isUser?' self-end flex-row-reverse':'self-start flex-row'} self flex gap-5`}>
+                                    <div class="relative h-min">
                                         <Image alt="account" className=" contacts-profile rounded-full object-cover" width={56} height={56} src={"/contacts/"+contact.image}/>
                                         {contact.online?<div className=" absolute rounded-full end-0 bottom-[0.25rem] w-[0.875rem] h-[0.875rem] border border-[#FFFBF4] bg-lightGreen"/>:""}
                                     </div>
@@ -47,7 +47,7 @@ function Chat() {
                                             <small className=" text-muted text-xs">{contact.sentAt}</small>
                                         </div>
                                         {contact.msgs.map((msg)=>
-                                            <div className={`${contact.isUser?'bg-primary text-white rounded-se-none':'bg-lightGray text-black rounded-ss-none'}   rounded-2xl p-3 w-fit text-sm`}>
+                                            <div key={msg} className={`${contact.isUser?'bg-primary text-white rounded-se-none':'bg-lightGray text-black rounded-ss-none'}   rounded-2xl p-3 w-fit text-sm`}>
                                                 {msg}
                                             </div>
                                         )}
@@ -61,7 +61,7 @@ function Chat() {
             </div>
             <div class="mt-auto w-full flex flex-col gap-7">
                 {data.activeChat.typing.length>0&&data.activeChat.typing.map((contact)=>
-                    <div className="flex gap-2 items-center px-base">
+                    <div key={contact.name} className="flex gap-2 items-center px-base">
                         <Image alt="account" className="typing-profile rounded-full object-cover" width={28} height={28} src={"/contacts/"+contact.image}/>
                         <span className=" text-muted text-sm"><span className=" text-black">{contact.name}</span> is typing.....</span>
                     </div>

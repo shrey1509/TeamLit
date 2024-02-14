@@ -29,7 +29,7 @@ function ContactInfo() {
                     </div>
                     <div class="grid gap-5 grid-cols-2">
                         {data.contactInfo.media.length>0&&data.contactInfo.media.map((image)=>
-                            <Image alt="media" className=" info-media rounded-[1.25rem] object-cover cursor-pointer" width={150} height={150} src={"/contactInfo/"+image}/>
+                            <Image key={image} alt="media" className=" info-media rounded-[1.25rem] object-cover cursor-pointer" width={150} height={150} src={"/contactInfo/"+image}/>
                         )}
                     </div>
                 </div>
@@ -42,7 +42,7 @@ function ContactInfo() {
                     </div>
                     <div class="flex flex-col gap-5 ">
                         {data.contactInfo.files.length>0&&data.contactInfo.files.map((file)=>
-                            <div className=" flex items-center justify-between cursor-pointer">
+                            <div key={file.name} className=" flex items-center justify-between cursor-pointer">
                                 <div className="flex items-center gap-[0.875rem]">
                                     <div className="h-[2.5rem] w-[2.5rem] rounded-full object-cover bg-[#F7F5F4] flex items-center justify-center">
                                         <Image alt="file"  width={15} height={18} src={"/contactInfo/icons/file.svg"}/>
@@ -65,7 +65,7 @@ function ContactInfo() {
                         </div>
                     </div>
                     {data.contactInfo.links.length>0&&data.contactInfo.links.map((link)=>
-                        <div className=" flex items-center justify-between cursor-pointer">
+                        <div key={link} className=" flex items-center justify-between cursor-pointer">
                             <div className="flex items-center gap-[0.875rem]">
                                 <div className="h-[2.5rem] w-[2.5rem] rounded-full object-cover bg-[#F7F5F4] flex items-center justify-center">
                                     <Image alt="link"  width={15} height={18} src={"/contactInfo/icons/link.svg"}/>
