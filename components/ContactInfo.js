@@ -3,14 +3,14 @@ import Image from "next/image";
 import data from './data.json'
 function ContactInfo() {
     return (
-        <div className=" w-full max-w-[23.75rem] flex-col py-base h-full border-border overflow-y-scroll no-scrollbar hidden xl:flex  ">
+        <div className=" w-full max-w-xs 1.5xl:max-w-[23.75rem] flex-col py-base h-full border-border overflow-y-scroll no-scrollbar hidden xl:flex  ">
             <div class="flex flex-col gap-1 items-center border-b border-border px-base pb-6">
                 <Image alt="account" className=" info-profile rounded-full object-cover" width={74} height={74} src={"/contacts/"+data.contactInfo.image}/>
                 <h2 className=" text-xl font-bold">{data.contactInfo.name}</h2>
                 <small className=" text-muted">{data.contactInfo.tag}</small>
                 
             </div>
-            <div class="flex justify-evenly border-b border-border px-base">
+            <div class="flex justify-evenly border-b border-border px-base cursor-pointer">
                 <div className=" py-4 text-muted">
                     Participants
                 </div>

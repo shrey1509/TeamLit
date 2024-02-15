@@ -21,14 +21,15 @@
   min-width: 1.125rem;
 }
 .contacts-profile{
-  height: clamp(3.5rem,3.5rem,3.5rem);
+  height: clamp(3.5rem,3.5rem,2.5rem);
+  width: clamp(3.5rem,3.5rem,2.5rem);
   min-width: 3.5rem;
 }
 .orange-shadow{
   box-shadow: 0px 4px 34px 0px #FF731D1A;
 }
 .participants-profile{
-  height: clamp(1.875rem,1.875rem,1.875rem);
+  height: clamp(1.875rem,1.875rem,0.875rem);
   min-width: 1.875rem;
 }
 .typing-profile{
@@ -40,6 +41,15 @@
   min-width: 4.625rem;
 }
 .info-media{
-  height: clamp(9.375rem,9.375rem,9.375rem);
-  min-width: 9.375rem;
+  height: clamp(9.375rem,9.375rem,8.375rem);
+  width: clamp(9.375rem,9.375rem,8.375rem);
+  min-width: 8.375rem;
+}
+
+@media screen and (max-width:1300px) {
+  .contacts-profile{
+    max-height: 2.5rem;
+    min-width: 2rem;
+    max-width: 2.5rem;
+  }
 }

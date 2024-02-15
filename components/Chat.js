@@ -4,11 +4,11 @@ import Image from "next/image";
 
 function Chat() {
     return (
-        <div className="w-full max-w-[35rem] 2xl:max-w-none flex flex-col py-base h-full border-r border-border overflow-hidden">
-            <div class="flex gap-8 items-center border-b pb-[1.875rem] border-border px-base">
-                <div className=" rounded-full border-2 border-[#FFE0C9] border-opacity-50 p-[0.625rem] relative">
+        <div className="w-full  1.5xl:max-w-[35rem] 2xl:max-w-none flex flex-col py-base h-full border-r border-border overflow-hidden">
+            <div class="flex gap-2 xl:gap-8 items-center border-b pb-[1.875rem] border-border px-3 xl:px-base">
+                <div className=" rounded-full border-[0.1875rem] border-[#FFE0C9] border-opacity-50 p-[0.625rem] relative">
                     <Image alt="account" className=" contacts-profile rounded-full object-cover" width={54} height={54} src={"/contacts/"+data.activeChat.image}/>
-                    <div className=" top-0 left-0 rounded-full absolute  border-l-2 border-b-2 border-[#82CF9C] h-full w-full"></div>
+                    <div className=" top-0 left-0 rounded-full absolute  border-l-[0.1875rem] border-b-[0.1875rem] border-[#82CF9C] h-full w-full"></div>
                 </div>
                 <div class="w-full flex justify-between items-center">
                     <div className="flex flex-col gap-1">
@@ -30,7 +30,7 @@ function Chat() {
                     </div>
                 </div>
             </div>
-            <div className=" px-base overflow-y-scroll no-scrollbar">
+            <div className=" px-3 xl:px-base overflow-y-scroll no-scrollbar">
                 {
                     data.activeChat.messages.length>0&&data.activeChat.messages.map((day)=>
                         <div key={day.day} className=" flex flex-col gap-5 pt-5">
@@ -38,7 +38,7 @@ function Chat() {
                             {day.messageList.map((contact)=>
                                 <div key={contact.name} className={`${contact.isUser?' self-end flex-row-reverse':'self-start flex-row'} self flex gap-5`}>
                                     <div class="relative h-min">
-                                        <Image alt="account" className=" contacts-profile rounded-full object-cover" width={56} height={56} src={"/contacts/"+contact.image}/>
+                                        <Image alt="account" className=" contacts-profile rounded-full object-cover object-top" width={56} height={56} src={"/contacts/"+contact.image}/>
                                         {contact.online?<div className=" absolute rounded-full end-0 bottom-[0.25rem] w-[0.875rem] h-[0.875rem] border border-[#FFFBF4] bg-lightGreen"/>:""}
                                     </div>
                                     <div className={`${contact.isUser?' items-end':' items-start'} flex flex-col gap-[0.625rem]`}>
@@ -61,12 +61,12 @@ function Chat() {
             </div>
             <div class="mt-auto w-full flex flex-col gap-7">
                 {data.activeChat.typing.length>0&&data.activeChat.typing.map((contact)=>
-                    <div key={contact.name} className="flex gap-2 items-center px-base">
-                        <Image alt="account" className="typing-profile rounded-full object-cover" width={28} height={28} src={"/contacts/"+contact.image}/>
+                    <div key={contact.name} className="flex gap-2 items-center px-3 xl:px-base pt-2">
+                        <Image alt="account" className="typing-profile rounded-full object-cover object-top" width={28} height={28} src={"/contacts/"+contact.image}/>
                         <span className=" text-muted text-sm"><span className=" text-black">{contact.name}</span> is typing.....</span>
                     </div>
                 )}
-                <div className=" self-center min-w-[30rem] 3xl:min-w-[40rem] cursor-pointer mx-[1.875rem] rounded-2xl py-[0.875rem] px-5 flex gap-3 justify-between bg-white orange-shadow">
+                <div className=" self-center xl:min-w-[30rem] 3xl:min-w-[40rem] cursor-pointer mx-[1.875rem] rounded-2xl py-[0.875rem] xl:px-5 flex gap-3 justify-between bg-white orange-shadow">
                     <div class="flex gap-3">
                         <Image className="" width={14} height={14} alt="edit" src="/chat/icons/edit.svg" />
                         <input className=" text-sm focus:outline-none" placeholder="Your message....." />

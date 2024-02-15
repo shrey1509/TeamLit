@@ -1,7 +1,7 @@
 import Image from "next/image";
 function Navbar() {
     return (
-        <div className=" h-full w-min py-10 px-base flex flex-col justify-between">
+        <div className=" h-full w-min py-10 px-3 xl:px-base hidden xl:flex flex-col justify-between">
             <div className="flex flex-col items-center gap-6 3xl:gap-[2.625rem] ">
                 <Image alt="logo" className="cursor-pointer mb-8 navbar-logo object-contain" src="/navbar/logo.svg" width={18} height={18}/>
                 <div className="rounded-full xl:p-2 1.5xl:p-3">
